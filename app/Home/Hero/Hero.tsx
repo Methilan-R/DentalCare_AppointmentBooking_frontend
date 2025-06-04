@@ -71,16 +71,15 @@ export default function Hero() {
             className="relative z-10 h-[400px] w-[500px]"
             priority
           />
-            
-  <div className="  w-[400px]  ">
+   
   <Image
     src="/image/dental.png"
     alt="Doctor"
-    fill
+     
     className="object-contain rounded-xl z-10"
     priority
   />
-</div>
+ 
 
 
         </div>
