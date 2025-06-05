@@ -1,89 +1,76 @@
-'use client';
-
 import React from 'react';
-import Image from 'next/image';
-import { FaArrowRightLong } from 'react-icons/fa6';
 
-export default function Hero() {
+const HeroSection: React.FC = () => {
   return (
-    <section className="  bg-blue-50 relative w-full h-[100vh] py-40">
-  <div className="w-[90%]  xl:w-[80%]  mx-auto flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
-
-        {/* Left Text Section */}
-        <div className="flex-1">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-800 mb-6">
-            Find the right <span className="text-cyan-600">doctor</span> get the <br />
-            best care
+    <section className="px-6 relative bg-white py-40   lg:h-[90vh]  ">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-center">
+        {/* Left Content */}
+        <div className="space-y-6">
+          <h1 className="text-5xl font-bold leading-tight">
+            Your <span className="text-blue-500">Smile</span> Matters to us
           </h1>
-          <p className="text-gray-500 text-sm md:text-base mb-6">
-            Get latest news in your inbox. Consectetur adipiscing elit,adipiscing elit.sed do
+          <p className="text-gray-600 max-w-md">
+            Specially designed for patients seeking dentistry abroad, we offer you bespoke expertise at a price that is unbelievably.
           </p>
+          <button className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition">
+            Book Appointment
+          </button>
 
-          {/* Ratings + Buttons */}
-          <div className="flex items-center space-x-4 mb-6">
-            <div className="bg-white p-3 rounded-lg shadow-md flex items-center space-x-2">
-              <div className="text-sm font-semibold text-gray-800">4.3k Plus</div>
-              <div className="flex -space-x-2">
-                <Image
-                  src="/image/p_img34.png"
-                  alt="user1"
-                  width={24}
-                  height={24}
-                  className="rounded-full border border-white"
-                />
-                <Image
+          {/* Two Small Images Below Button */}
+          <div className="grid grid-cols-2 gap-4 pt-6">
+            {/* Image 1 with badge */}
+            <div className="relative rounded-xl overflow-hidden shadow-md w-full h-60">
+              <img
+                src="/image/d2.jpeg"
+                alt="Dental tools"
+                width={320}
+                height={160}
+                className="w-full h-72 object-cover"
+              />
+              <div className="absolute bottom-2 left-2 bg-white px-3 py-1 text-xs rounded-full shadow font-medium flex items-center space-x-2">
+                <img
                   src="/image/product_5.png"
-                  alt="user2"
-                  width={24}
-                  height={24}
-                  className="rounded-full border border-white"
+                  alt="Users"
+                  width={20}
+                  height={20}
+                  className="h-5 w-5 rounded-full"
                 />
-                <Image
-                  src="/image/product_7.png"
-                  alt="user3"
-                  width={24}
-                  height={24}
-                  className="rounded-full border border-white"
-                />
+                <span>15K+ Happy customers</span>
               </div>
-              <div className="text-xs text-gray-500 ml-2">Satisfied Patients</div>
             </div>
-          </div>
 
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-yellow-400 hover:bg-yellow-500 text-white px-6 py-2 rounded-md text-sm font-medium transition">
-              Make Appointment
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-6 py-2 rounded-md text-sm font-medium hover:bg-gray-100 transition">
-              Download app
-            </button>
+            {/* Image 2 - Smiling woman */}
+            <div className="rounded-xl overflow-hidden shadow-md w-full h-60">
+              <img
+                src="/image/d1.jpeg"
+                alt="Happy Customer"
+                width={320}
+                height={160}
+                className="w-full h-72 object-cover"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Right Doctor Image Section */}
-        <div className="relative flex-1 grid grid-cols-2 gap-4  ">
-          <div className="absolute top-[20px] left-[10px] w-56 h-[380px] bg-yellow-500  rounded-tl-[40px] rounded-br-[40px]  z-0  opacity-70"></div>
-            <Image
-            src="/image/doctor.png" // Replace with your doctor image
-            alt="Doctor"
-            width={400}
-            height={400}
-            className="relative z-10 h-[400px] w-[500px]"
-            priority
+        {/* Right Large Image with Overlay */}
+        <div className="relative rounded-xl overflow-hidden shadow-lg w-full h-[500px]">
+          <img
+            src="/image/doct.png"
+            alt="Dental Treatment"
+            width={600}
+            height={500}
+            className="w-full h-full object-cover"
           />
-   
-  <Image
-    src="/image/dental.png"
-    alt="Doctor"
-     
-    className="object-contain rounded-xl z-10"
-    priority
-  />
- 
-
-
+          <div className="absolute bottom-4 left-4 right-4 bg-white/90 rounded-lg p-4 text-gray-800 text-sm shadow-md">
+            <p className="font-semibold">A Modern Approach to World - Class Care</p>
+            <p className="text-xs mt-1">
+              We’re here to provide exceptional service that meets your needs and exceeds your expectations. Whether you're looking for expert solutions, personalized care.
+            </p>
+          </div>
         </div>
       </div>
     </section>
   );
-}
+};
+
+export default HeroSection;
