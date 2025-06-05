@@ -6,7 +6,7 @@ const Service = () => {
   return (
     <div className="bg-white">
       {/* Our Services Section */}
-      <div className="py-4 lg:py-10">
+      <div className="py-4 lg:py-16">
         <h2 className="text-2xl font-bold text-center mb-4">Our Services</h2>
         <p className="text-gray-700 mb-6 text-center w-full max-w-2xl mx-auto">
           With over 15 years of experience, we are committed to delivering exceptional dental care tailored to your needs.
