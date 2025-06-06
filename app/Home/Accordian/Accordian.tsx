@@ -1,5 +1,6 @@
 "use client"
 import { useState, FC } from "react";
+import Image from "next/image";
 
 // Sample service data
 interface Service {
@@ -68,10 +69,10 @@ const DentalAccordionSection: FC = () => {
 
   return (
     <div className="w-full px-6 py-6 lg:py-4">
-      <div className="container mx-auto">
+      <div className="container mx-auto bg-amber-50">
         <div className="grid border-none shadow-md rounded-lg container grid-cols-1 gap-8 items-center lg:grid-cols-2">
           {/* Text Section */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 px-4">
             <div className="flex flex-col gap-4">
               {/* Replace with your actual Badge component */}
               <div className="inline-block border px-2 py-1 text-sm rounded-md text-primary border-primary w-fit">
@@ -100,7 +101,14 @@ const DentalAccordionSection: FC = () => {
           </div>
 
           {/* Image Placeholder */}
-          <div className="bg-muted rounded-md aspect-square"></div>
+         <div className="relative rounded-md aspect-square overflow-hidden">
+      <Image
+        src="/image/dent.jpeg"
+        alt="Your image description"
+        fill
+        className="object-cover"
+      />
+    </div>
         </div>
       </div>
     </div>

@@ -44,7 +44,7 @@ export const AppointmentForm = () => {
         {/* Image + Location Section */}
         <div className="relative rounded-xl overflow-hidden shadow-md">
           <Image
-            src="/clinic.jpg" // Replace with actual image path
+            src="/image/build.jpeg" // Replace with actual image path
             alt="Clinic Building"
             width={700}
             height={500}

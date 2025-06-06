@@ -6,21 +6,21 @@ export const Testimonials = () => {
       text: "The team was professional, friendly, and made me feel at ease throughout the entire process. My smile has never looked better, and I truly appreciate the personalised attention I was given.",
       name: "Mark Jhonson",
       service: "Dental Filling",
-      avatar: "/avatars/avatar1.jpg", // Replace with real image paths
+      avatar: "/image/product_2.png", // Replace with real image paths
       bg: "bg-blue-50"
     },
     {
       text: "The team was professional, friendly, and made me feel at ease throughout the entire process. My smile has never looked better, and I truly appreciate the personalised attention I was given.",
       name: "Mark Jhonson",
       service: "Dental Cleaning",
-      avatar: "/avatars/avatar2.jpg",
+      avatar: "/image/p_img34.png",
       bg: "bg-yellow-50"
     },
     {
       text: "The team was professional, friendly, and made me feel at ease throughout the entire process. My smile has never looked better, and I truly appreciate the personalised attention I was given.",
       name: "Mark Jhonson",
       service: "Teeth Whitening",
-      avatar: "/avatars/avatar3.jpg",
+      avatar: "/image/p_img44.png",
       bg: "bg-cyan-50"
     }
   ];
