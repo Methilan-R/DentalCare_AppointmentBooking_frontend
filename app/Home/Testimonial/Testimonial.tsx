@@ -1,4 +1,7 @@
+'use client';
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export const Testimonials = () => {
   const reviews = [
@@ -6,42 +9,70 @@ export const Testimonials = () => {
       text: "The team was professional, friendly, and made me feel at ease throughout the entire process. My smile has never looked better, and I truly appreciate the personalised attention I was given.",
       name: "Mark Jhonson",
       service: "Dental Filling",
-      avatar: "/image/product_2.png", // Replace with real image paths
-      bg: "bg-blue-50"
+      avatar: "/image/product_2.png",
+      bg: "bg-blue-50",
     },
     {
       text: "The team was professional, friendly, and made me feel at ease throughout the entire process. My smile has never looked better, and I truly appreciate the personalised attention I was given.",
       name: "Mark Jhonson",
       service: "Dental Cleaning",
       avatar: "/image/p_img34.png",
-      bg: "bg-yellow-50"
+      bg: "bg-yellow-50",
     },
     {
       text: "The team was professional, friendly, and made me feel at ease throughout the entire process. My smile has never looked better, and I truly appreciate the personalised attention I was given.",
       name: "Mark Jhonson",
       service: "Teeth Whitening",
       avatar: "/image/p_img44.png",
-      bg: "bg-cyan-50"
-    }
+      bg: "bg-cyan-50",
+    },
   ];
 
   return (
     <section className="w-full py-4 bg-white">
-      <div className="container mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        className="container mx-auto px-4 text-center"
+      >
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1, duration: 0.6 }}
+          className="text-3xl md:text-5xl font-bold tracking-tight mb-4"
+        >
           See What Our <br />
           <span className="text-primary">Clients have to Say</span>
-        </h2>
-        <p className="max-w-3xl mx-auto text-muted-foreground text-base md:text-lg mb-12">
+        </motion.h2>
+
+        <motion.p
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          className="max-w-3xl mx-auto text-muted-foreground text-base md:text-lg mb-12"
+        >
           With over 15 years of experience, our clinic is dedicated to providing
           top-notch dental care. Our team of professionals ensures every visit is
           comfortable and stress-free.
-        </p>
+        </motion.p>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.2 }}
+          className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        >
           {reviews.map((review, index) => (
-            <div
+            <motion.div
               key={index}
+              variants={{
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 },
+              }}
+              transition={{ duration: 0.6 }}
               className={`rounded-xl ${review.bg} p-6 text-left shadow-sm`}
             >
               <p className="text-sm md:text-base text-gray-700 mb-6 leading-relaxed">
@@ -64,10 +95,10 @@ export const Testimonials = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

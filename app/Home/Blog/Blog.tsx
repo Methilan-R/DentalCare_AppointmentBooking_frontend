@@ -1,25 +1,59 @@
+'use client';
+
 import { MoveRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+
+// Animation variants
+const fadeLeft = {
+  initial: { opacity: 0, x: -60 },
+  animate: { opacity: 1, x: 0 },
+};
+
+const fadeRight = {
+  initial: { opacity: 0, x: 60 },
+  animate: { opacity: 1, x: 0 },
+};
+
+const cardVariant = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+};
 
 export const Blog1 = () => (
-  <div className="w-full px-6 py-20 lg:py-20 bg-background">
+  <section className="w-full px-6 py-20 lg:py-20 bg-background overflow-hidden">
     <div className="container mx-auto flex flex-col gap-14">
       {/* Header Section */}
-      <div className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-center gap-6">
+      <motion.div
+        className="flex w-full flex-col sm:flex-row sm:justify-between sm:items-center gap-6"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        variants={fadeLeft}
+      >
         <h2 className="text-3xl md:text-5xl font-semibold tracking-tight">
           Oral Health Insights
         </h2>
-        <Button className="gap-2 px-6 py-2 text-base">
-          View all articles <MoveRight className="w-4 h-4" />
-        </Button>
-      </div>
+        <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Button className="gap-2 px-6 py-2 text-base">
+            View all articles <MoveRight className="w-4 h-4" />
+          </Button>
+        </motion.div>
+      </motion.div>
 
       {/* Blog Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         {blogPosts.map((post, index) => (
-          <div
+          <motion.div
             key={index}
-            className="flex flex-col rounded-xl border bg-card hover:shadow-lg transition-shadow duration-300 ease-in-out overflow-hidden cursor-pointer"
+            className="flex flex-col rounded-xl border bg-card overflow-hidden cursor-pointer shadow-sm hover:shadow-xl transition-shadow"
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.2, duration: 0.7 }}
+            variants={cardVariant}
+            whileHover={{ scale: 1.02 }}
           >
             <video
               src={post.video}
@@ -37,14 +71,14 @@ export const Blog1 = () => (
                 {post.description}
               </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
-  </div>
+  </section>
 );
 
-// Blog post data with related video file for each
+// Blog post data
 const blogPosts = [
   {
     title: "5 Signs You Need a Dental Checkup",
