@@ -10,10 +10,7 @@ const fadeLeft = {
   animate: { opacity: 1, x: 0 },
 };
 
-const fadeRight = {
-  initial: { opacity: 0, x: 60 },
-  animate: { opacity: 1, x: 0 },
-};
+ 
 
 const cardVariant = {
   initial: { opacity: 0, y: 40 },

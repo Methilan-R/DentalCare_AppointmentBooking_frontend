@@ -1,9 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
-import { Check } from 'lucide-react';
-import { Badge } from '@/components/ui/badge';
+import { motion } from 'framer-motion'; 
 
 const staggerContainer = {
   hidden: {},

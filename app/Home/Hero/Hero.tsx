@@ -1,7 +1,7 @@
-'use client'; 
+'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-
+import Image from 'next/image';
 
 const HeroSection: React.FC = () => {
   return (
@@ -34,10 +34,11 @@ const HeroSection: React.FC = () => {
               whileHover={{ scale: 1.03 }}
               className="relative rounded-xl overflow-hidden shadow-md w-full h-60"
             >
-              <img
+              <Image
                 src="/image/d2.jpeg"
                 alt="Dental tools"
-                className="w-full h-72 object-cover"
+                fill
+                className="object-cover"
               />
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -45,23 +46,27 @@ const HeroSection: React.FC = () => {
                 transition={{ delay: 0.4, duration: 0.6 }}
                 className="absolute bottom-2 left-2 bg-white px-3 py-1 text-xs rounded-full shadow font-medium flex items-center space-x-2"
               >
-                <img
-                  src="/image/product_5.png"
-                  alt="Users"
-                  className="h-5 w-5 rounded-full"
-                />
+                <div className="relative w-5 h-5">
+                  <Image
+                    src="/image/product_5.png"
+                    alt="Users"
+                    fill
+                    className="rounded-full object-cover"
+                  />
+                </div>
                 <span>15K+ Happy customers</span>
               </motion.div>
             </motion.div>
 
             <motion.div
               whileHover={{ scale: 1.03 }}
-              className="rounded-xl overflow-hidden shadow-md w-full h-60"
+              className="relative rounded-xl overflow-hidden shadow-md w-full h-60"
             >
-              <img
+              <Image
                 src="/image/d1.jpeg"
                 alt="Happy Customer"
-                className="w-full h-72 object-cover"
+                fill
+                className="object-cover"
               />
             </motion.div>
           </div>
@@ -74,10 +79,11 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="relative rounded-xl overflow-hidden shadow-lg w-full h-[500px]"
         >
-          <img
+          <Image
             src="/image/doct.png"
             alt="Dental Treatment"
-            className="w-full h-full object-cover"
+            fill
+            className="object-cover"
           />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -87,7 +93,7 @@ const HeroSection: React.FC = () => {
           >
             <p className="font-semibold">A Modern Approach to World - Class Care</p>
             <p className="text-xs mt-1">
-              We’re here to provide exceptional service that meets your needs and exceeds your expectations. Whether you're looking for expert solutions, personalized care.
+              We’re here to provide exceptional service that meets your needs and exceeds your expectations. Whether you&apos;re looking for expert solutions, personalized care.
             </p>
           </motion.div>
         </motion.div>

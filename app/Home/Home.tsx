@@ -1,10 +1,11 @@
-import React from 'react' 
-import HeroSection from './Hero/Hero'
+import React from 'react'  
 import Service from './Service/Service'
 import DentalAccordionSection from './Accordian/Accordian'
 import { Blog1 } from './Blog/Blog'
 import { Testimonials } from './Testimonial/Testimonial'
 import { AppointmentForm } from './Form/AppointmentForm'
+import HeroSection from './Hero/Hero'
+ 
 
 const Home = () => {
   return (
