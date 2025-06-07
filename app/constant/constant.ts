@@ -8,17 +8,17 @@ export const navLinks = [
   },
   {
     id: 2,
-    url: "#",
+    url: "/pages/AllDoctors",
     label: "AllDoctors",
   },
   {
     id: 3,
-    url: "#",
+    url: "/pages/About",
     label: "About",
   },
   {
     id: 4,
-    url: "#",
+    url: "/pages/Contact",
     label: "Contact",
   },
    
