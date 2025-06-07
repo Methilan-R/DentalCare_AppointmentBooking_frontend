@@ -17,35 +17,42 @@ const doctors: Doctor[] = [
     specialty: "Cosmetic Dentist",
     description:
       "Dr. Carter specializes in enhancing smiles through advanced cosmetic procedures like veneers, teeth whitening, and smile makeovers.",
-    image: "/images/doctors/cosmetic.jpg",
+    image: "/image/doc1.avif",
   },
   {
     name: "Dr. Raj Malhotra",
     specialty: "Oral Surgeon",
     description:
       "Performs complex procedures like wisdom tooth removal and dental implants with precision and care.",
-    image: "/images/doctors/oralsurgeon.jpg",
+    image: "/image/doc3.webp",
   },
   {
-    name: "Dr. Anna Lopez",
+    name: "Dr. Anrew Lopez",
     specialty: "Pediatric Dentist",
     description:
       "Focused on children’s dental health. Makes every visit a comfortable experience for kids.",
-    image: "/images/doctors/pediatric.jpg",
+    image: "/image/doc8.avif",
   },
   {
     name: "Dr. James Bennett",
     specialty: "Orthodontist",
     description:
       "Expert in braces and Invisalign to help patients get a beautifully aligned smile.",
-    image: "/images/doctors/orthodontist.jpg",
+    image: "/image/doc4.avif",
   },
   {
     name: "Dr. Sophie Nguyen",
     specialty: "Endodontist",
     description:
       "Specialist in root canal treatments and saving teeth through advanced endodontic therapy.",
-    image: "/images/doctors/endodontist.jpg",
+    image: "/image/doc5.avif",
+  },
+  {
+    name: "Dr. Sophie Nguyen",
+    specialty: "Endodontist",
+    description:
+      "Specialist in root canal treatments and saving teeth through advanced endodontic therapy.",
+    image: "/image/doc6.avif",
   },
 ];
 
