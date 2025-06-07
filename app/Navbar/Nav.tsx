@@ -25,7 +25,9 @@ const Nav = ({ openNav }: Props) => {
         <nav className="hidden lg:flex space-x-8 text-sm font-medium text-gray-700">
           {navLinks.map((link) => (
             <Link key={link.id} href={link.url}>
-              <p className="hover:text-cyan-600 transition-colors duration-200">{link.label}</p>
+              <p className="relative hover:text-cyan-600 transition-colors duration-200 before:content-[''] before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 before:bg-sky-500 hover:before:w-full before:transition-all before:duration-300">
+                {link.label}
+              </p>
             </Link>
           ))}
         </nav>

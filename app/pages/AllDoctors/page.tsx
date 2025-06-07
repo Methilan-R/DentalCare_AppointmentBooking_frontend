@@ -61,7 +61,7 @@ const AllDoctors = () => {
     <div className="w-full py-20 lg:py-32 bg-gray-50">
       <div className="container mx-auto px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">
+          <h2 className="text-4xl lg:text-5xl font-bold text-blue-900 tracking-tight">
             Meet Our Dental Experts
           </h2>
           <p className="mt-4 text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -84,7 +84,7 @@ const AllDoctors = () => {
                 />
               </div>
               <div className="flex flex-col gap-1">
-                <h3 className="text-xl font-semibold">{doc.name}</h3>
+                <h3 className="text-xl font-semibold text-blue-600">{doc.name}</h3>
                 <Badge variant="outline">{doc.specialty}</Badge>
                 <p className="text-muted-foreground text-sm mt-2">
                   {doc.description}
@@ -101,5 +101,4 @@ const AllDoctors = () => {
   );
 };
 
-// ✅ This is the fix!
 export default AllDoctors;

@@ -9,7 +9,7 @@ const Contact = () => {
       <div className="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
         {/* Contact Info */}
         <div className="flex flex-col gap-8">
-          <h2 className="text-4xl font-bold tracking-tight">
+          <h2 className="text-4xl font-bold text-blue-900 tracking-tight">
             Get in Touch With Us
           </h2>
           <p className="text-muted-foreground text-lg max-w-md">
